@@ -2,6 +2,6 @@
 def power_digit_sum(x, n)
   powered = x**n
   split = powered.to_s.chars.map(&:to_i)
-  final = split.inject(:+)
+  final = split.reduce(:+)
   return final
 end
